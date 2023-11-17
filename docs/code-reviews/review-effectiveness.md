@@ -30,5 +30,5 @@ Code reviews are a continuous learning process. Encourage all team members to pa
 
 - [Best Kept Secrets of Peer Code Review](https://static1.smartbear.co/smartbear/media/pdfs/best-kept-secrets-of-peer-code-review_redirected.pdf)
 - [Further reading: Google's Engineering Practices documentation - How to do a code review](https://google.github.io/eng-practices/review/reviewer/)
-- [Pyschological Safety in Code Reviews](https://www.youtube.com/watch?v=IH67P7EMnt0)
+- [Psychological Safety in Code Reviews](https://www.youtube.com/watch?v=IH67P7EMnt0)
 - [Sample code review session agenda](sample-agenda.md)
