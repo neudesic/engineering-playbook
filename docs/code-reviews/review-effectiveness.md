@@ -23,7 +23,7 @@ After the review, authors should act on the feedback, refining and improving the
 ## Conclusion
 Effective code reviews are not just about catching errors; they are opportunities for team growth and learning. By preparing adequately, fostering a collaborative and respectful environment, focusing on constructive feedback, and prioritizing the project's quality, teams can make the most out of these sessions, leading to robust, efficient, and maintainable software.
 
-## Remember...
+## Remember
 Code reviews are a continuous learning process. Encourage all team members to participate, share their knowledge, and view each session as an opportunity to improve both the code and their own skills. With the right mindset and approach, code reviews can be a valuable asset in any software development project.
 
 ## Resources

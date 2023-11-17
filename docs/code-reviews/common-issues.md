@@ -1,4 +1,4 @@
-## Common issues
+# Common issues
 
 Here are some of the most common issues that code reviews can help catch:
 

@@ -1,4 +1,4 @@
-### Sample code review session outline:
+# Sample code review session outline
 
 1. **Preparation**
    - Reviewers familiarize themselves with the code changes before the meeting.
