@@ -1,6 +1,6 @@
 # Code Reviews
 
-Code reviews are an essential part of the software development process, offering numerous benefits such as improved code quality, shared knowledge, and early bug detection. However, the effectiveness of these reviews largely depends on the approach and mindset of the participants.
+Code reviews are a required part of the software development process, offering numerous benefits such as improved code quality, shared knowledge, and early bug detection. However, the effectiveness of these reviews largely depends on the approach and mindset of the participants.
 
 ## Goals
 
