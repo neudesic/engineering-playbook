@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/agile-development/advanced-topics/backlog-management/risk-management/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/agile-development/advanced-topics/collaboration/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
@@ -181,6 +186,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/automated-testing/e2e-testing/recipes/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/automated-testing/e2e-testing/recipes/gauge-framework/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
@@ -231,6 +241,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/automated-testing/tech-specific-samples/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/automated-testing/tech-specific-samples/azdo-container-dev-test-release/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
@@ -241,12 +256,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/automated-testing/templates/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/automated-testing/templates/case-study-template/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/automated-testing/templates/test_type_template/</loc>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/automated-testing/templates/test-type-template/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -306,6 +326,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/code-reviews/pull-request-template/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/code-reviews/pull-requests/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
@@ -342,11 +367,6 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/code-reviews/process-guidance/reviewer-guidance/</loc>
-         <lastmod>2024-01-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/code-reviews/pull-request-template/pull-request-template/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -406,12 +426,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/azure-devops/secret-management-per-branch/</loc>
-         <lastmod>2024-01-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/devops-provider-recipes/github-actions/runtime-variables/runtime-variables/</loc>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/devops-provider-recipes/github-actions/runtime-variables/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -421,7 +436,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/gitops/secret-management/secret-management-gitops/</loc>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/gitops/secret-management/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/gitops/secret-management/azure-devops-secret-management-per-branch/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -431,12 +451,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/low-code-solutions/low-code-solutions/</loc>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/low-code-solutions/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/recipes/github-workflows/workflow-per-environment/</loc>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/recipes/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/recipes/github-workflows/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/recipes/terraform/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -486,17 +516,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/azure-devops/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/azure-devops/service-connection-security/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/dependency-container-scanning/dependency_container_scanning/</loc>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/dependency-container-scanning/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/penetration-testing/penetration_testing/</loc>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/penetration-testing/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/secret-management/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -511,17 +551,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/secret-management/static-code-analysis/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/secret-management/recipes/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/secret-management/recipes/detect-secrets-ado/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/secret-management/recipes/detect-secrets/</loc>
-         <lastmod>2024-01-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://microsoft.github.io/code-with-engineering-playbook/continuous-integration/dev-sec-ops/static-code-analysis/static_code_analysis/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -731,6 +776,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/design/exception-handling/readme/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/design/sustainability/readme/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
@@ -801,6 +851,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/documentation/best-practices/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/documentation/best-practices/automation/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
@@ -842,6 +897,11 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/documentation/guidance/work-items/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/documentation/recipes/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1047,6 +1107,11 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/code-with-engineering-playbook/observability/recipes-observability/</loc>
+         <lastmod>2024-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/code-with-engineering-playbook/observability/pillars/</loc>
          <lastmod>2024-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
