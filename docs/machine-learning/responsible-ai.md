@@ -1,8 +1,8 @@
-# Responsible AI in ISE
+# Responsible AI in Neudesic Engineering Excellence
 
 ## Microsoft's Responsible AI principles
 
-Every ML project in ISE goes through a Responsible AI (RAI) assessment to ensure that it upholds Microsoft's [6 Responsible AI principles](https://www.microsoft.com/en-us/ai/responsible-ai):
+Every ML project in Neudesic goes through a Responsible AI (RAI) assessment to ensure that it upholds Microsoft's [6 Responsible AI principles](https://www.microsoft.com/en-us/ai/responsible-ai):
 
 - Fairness
 - Reliability & Safety

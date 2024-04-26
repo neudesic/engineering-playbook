@@ -60,7 +60,7 @@ The dev crew should always participate in all design review sessions
 
 Domain experts should participate in design review sessions as needed
 
-- ISE Tech Domains
+- Tech Domains
 - Customer subject-matter experts (SME)
 - Senior Leadership
 

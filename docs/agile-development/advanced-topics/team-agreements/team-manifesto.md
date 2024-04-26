@@ -2,7 +2,7 @@
 
 ## Introduction
 
-ISE teams work with a new development team in each customer engagement which requires a phase of introduction & knowledge transfer before starting an engagement.
+Neudesic Engineering Excellence teams work with a new development team in each customer engagement which requires a phase of introduction & knowledge transfer before starting an engagement.
 
 Completion of this phase of ice-breakers and discussions about the standards takes time, but is required to start increasing the learning curve of the new team.
 
