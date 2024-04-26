@@ -53,7 +53,7 @@ There is also a healthy balancing act in supporting a healthy debate while not h
 
 The dev crew should always participate in all design review sessions
 
-- [ISE](../../ISE.md) Engineering
+- [NEE](../../NEE.md) Engineering
 - Customer Engineering
 
 ### Domain Experts
