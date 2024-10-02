@@ -19,10 +19,10 @@ The goal of the **Cloud Infrastructure Services** section is to provide guidance
 
 ### Resources
 
-- [Cloud Adoption Framework (CAF) template](artifacts/CAF-template.docx)
-- [Discover and Design Timeline template](artifacts/Discover-and-Design-Timeline-template.xlsx)
-- [Cloud Adoption Strategy Evaluator output sample](artifacts/Cloud-Adoption-Strategy-Evaluator-output-sample.xlsx)
-- [Well Architected Framework (WAF) example](artifacts/WAF-example.csv)
+- [Cloud Adoption Framework (CAF) template](templates/CAF-template.docx)
+- [Discover and Design Timeline template](templates/Discover-and-Design-Timeline-template.xlsx)
+- [Cloud Adoption Strategy Evaluator output sample](templates/Cloud-Adoption-Strategy-Evaluator-output-sample.xlsx)
+- [Well Architected Framework (WAF) example](templates/WAF-example.csv)
 
 ### Example
 
