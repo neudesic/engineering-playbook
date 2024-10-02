@@ -65,7 +65,7 @@ A [breakdown of sections](docs/SPRINT-STRUCTURE.md) according to the structure o
 
 * [Machine Learning Fundamentals](docs/machine-learning/README.md)
 * [User-Interface Engineering](docs/user-interface-engineering/README.md)
-* [Clouc Infrastructure Services](docs/cloud-infrastructure-services/README.md)
+* [Cloud Infrastructure Services](docs/cloud-infrastructure-services/README.md)
 
 ## Contributing
 
