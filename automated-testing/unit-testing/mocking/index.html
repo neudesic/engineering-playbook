@@ -7608,12 +7608,12 @@ stubs.</p>
 <span class="c1"># with a dependency injection framework an overrides</span>
 <span class="c1"># a service with a stub</span>
 
-<span class="k">class</span> <span class="nc">StubTestCase</span><span class="p">(</span><span class="n">TestBase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">StubTestCase</span><span class="p">(</span><span class="n">TestBase</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">StubTestCase</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setUp</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">service_a</span><span class="o">.</span><span class="n">override</span><span class="p">(</span><span class="n">StubService</span><span class="p">())</span>
 
-    <span class="k">def</span> <span class="nf">test_service</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_service</span><span class="p">():</span>
         <span class="n">service</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">service_a</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">StubService</span><span class="p">))</span>
 </code></pre></div>

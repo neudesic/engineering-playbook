@@ -7488,7 +7488,7 @@
 <p>Reading and writing to csv, reading images or loading audio files are common scenarios encountered in MLOps projects.</p>
 <h3 id="example-verify-that-a-load-function-calls-read_csv-if-the-file-exists">Example: Verify that a load function calls read_csv if the file exists</h3>
 <p><code>utils.py</code></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">df</span>
@@ -7502,13 +7502,13 @@
 <p>Note: Below we mock the specific os and pd functions referenced in the utils file, any others are left unaffected and would run as normal.</p>
 </blockquote>
 <p><code>test_utils.py</code></p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">utils</span>
-<span class="kn">from</span> <span class="nn">mock</span> <span class="kn">import</span> <span class="n">patch</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">utils</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mock</span><span class="w"> </span><span class="kn">import</span> <span class="n">patch</span>
 
 
 <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;utils.os.path.isfile&#39;</span><span class="p">)</span>
 <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;utils.pd.read_csv&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_load_data_calls_read_csv_if_exists</span><span class="p">(</span><span class="n">mock_isfile</span><span class="p">,</span> <span class="n">mock_read_csv</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_load_data_calls_read_csv_if_exists</span><span class="p">(</span><span class="n">mock_isfile</span><span class="p">,</span> <span class="n">mock_read_csv</span><span class="p">):</span>
     <span class="c1"># arrange</span>
     <span class="c1"># always return true for isfile</span>
     <span class="n">utils</span><span class="o">.</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="kc">True</span>
@@ -7524,7 +7524,7 @@
 <p>Similarly, we can verify that it's called 0 or multiple times. In the example below where we verify that it's not called if the file doesn't exist</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;utils.os.path.isfile&#39;</span><span class="p">)</span>
 <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;utils.pd.read_csv&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_load_data_does_not_call_read_csv_if_not_exists</span><span class="p">(</span><span class="n">mock_isfile</span><span class="p">,</span> <span class="n">mock_read_csv</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_load_data_does_not_call_read_csv_if_not_exists</span><span class="p">(</span><span class="n">mock_isfile</span><span class="p">,</span> <span class="n">mock_read_csv</span><span class="p">):</span>
     <span class="c1"># arrange</span>
     <span class="c1"># file doesn&#39;t exist</span>
     <span class="n">utils</span><span class="o">.</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="kc">False</span>
@@ -7543,25 +7543,25 @@
 <p>Note: The sample data is still hard coded if possible, and does not need to be large. Only add as much sample data as required for the tests to make the tests readable.</p>
 </blockquote>
 <p>Use the fixture to return the sample data, and add this as a parameter to the tests where you want to use the sample data.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pytest</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
-<span class="k">def</span> <span class="nf">house_features_json</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">house_features_json</span><span class="p">():</span>
   <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="mi">2500</span><span class="p">,</span> <span class="s1">&#39;rooms&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">}</span>
 
-<span class="k">def</span> <span class="nf">test_clean_features_cleans_nan_values</span><span class="p">(</span><span class="n">house_features_json</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_clean_features_cleans_nan_values</span><span class="p">(</span><span class="n">house_features_json</span><span class="p">):</span>
   <span class="n">cleaned_features</span> <span class="o">=</span> <span class="n">clean_features</span><span class="p">(</span><span class="n">house_features_json</span><span class="p">)</span>
   <span class="k">assert</span> <span class="n">cleaned_features</span><span class="p">[</span><span class="s1">&#39;rooms&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
 
-<span class="k">def</span> <span class="nf">test_extract_features_extracts_price_per_area</span><span class="p">(</span><span class="n">house_features_json</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_extract_features_extracts_price_per_area</span><span class="p">(</span><span class="n">house_features_json</span><span class="p">):</span>
   <span class="n">extracted_features</span> <span class="o">=</span> <span class="n">extract_features</span><span class="p">(</span><span class="n">house_features_json</span><span class="p">)</span>
   <span class="k">assert</span> <span class="n">extracted_features</span><span class="p">[</span><span class="s1">&#39;price_per_area&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">100</span>
 </code></pre></div>
 <h2 id="transforming-data">Transforming data</h2>
 <p>For cleaning and transforming data, test fixed input and output, but try to limit each test to one verification.</p>
 <p>For example, create one test to verify the output shape of the data.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test_resize_image_generates_the_correct_size</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_resize_image_generates_the_correct_size</span><span class="p">():</span>
   <span class="c1"># Arrange</span>
   <span class="n">original_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 
@@ -7572,7 +7572,7 @@
   <span class="n">resized_image</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
 <p>and one to verify that any padding is made appropriately</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test_resize_image_pads_correctly</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_resize_image_pads_correctly</span><span class="p">():</span>
   <span class="c1"># Arrange</span>
   <span class="n">original_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 
@@ -7593,7 +7593,7 @@
                              <span class="c1"># wider than target</span>
                              <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
                          <span class="p">])</span>
-<span class="k">def</span> <span class="nf">test_resize_image_generates_the_correct_size</span><span class="p">(</span><span class="n">orig_height</span><span class="p">,</span> <span class="n">orig_width</span><span class="p">,</span> <span class="n">expected_height</span><span class="p">,</span> <span class="n">expected_width</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_resize_image_generates_the_correct_size</span><span class="p">(</span><span class="n">orig_height</span><span class="p">,</span> <span class="n">orig_width</span><span class="p">,</span> <span class="n">expected_height</span><span class="p">,</span> <span class="n">expected_width</span><span class="p">):</span>
   <span class="c1"># Arrange</span>
   <span class="n">original_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">orig_height</span><span class="p">,</span> <span class="n">orig_width</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 
@@ -7609,7 +7609,7 @@
 <p>Since these will often take a bit longer to run it's important to be able to separate them from unit tests so that the developers on the team can still run unit tests as part of their test driven development.</p>
 <p>One way to do this is using marks</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">longrunning</span>
-<span class="k">def</span> <span class="nf">test_integration_between_two_systems</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_integration_between_two_systems</span><span class="p">():</span>
     <span class="c1"># this might take a while</span>
 </code></pre></div>
 <p>Run all tests that are not marked <code>longrunning</code></p>

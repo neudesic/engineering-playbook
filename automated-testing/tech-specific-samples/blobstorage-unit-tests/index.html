@@ -7434,10 +7434,10 @@ azurite<span class="w"> </span>--silent<span class="w"> </span>--location<span c
 </li>
 <li>
 <p>Container name and initialize env variables: Use conftest.py for test integration.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">azure.storage.blob</span> <span class="kn">import</span> <span class="n">BlobServiceClient</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">azure.storage.blob</span><span class="w"> </span><span class="kn">import</span> <span class="n">BlobServiceClient</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">def</span> <span class="nf">pytest_generate_tests</span><span class="p">(</span><span class="n">metafunc</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pytest_generate_tests</span><span class="p">(</span><span class="n">metafunc</span><span class="p">):</span>
    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;STORAGE_CONNECTION_STRING&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;&#39;</span>
    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;STORAGE_CONTAINER&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;test-container&#39;</span>
 
