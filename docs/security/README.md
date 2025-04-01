@@ -1,6 +1,7 @@
 # Security
 
-Developers working on projects should adhere to industry-recommended standard practices for secure design and implementation of code. For the purposes of our customers, this means our engineers should understand the [OWASP Top 10 Web Application Security Risks](https://owasp.org/www-project-top-ten/), as well as how to mitigate as many of them as possible, using the resources below.
+Developers working on projects should adhere to industry-recommended standard practices for secure design and implementation of code. For the purposes of our customers, this means our engineers should understand the [OWASP Top 10 Web Application Security Risks](https://owasp.org/www-project-top-ten/), as well as how to mitigate as many of them as possible, using the resources below. OWASP 2021 focuses on key issues such as Insecure Design, Identification & Authentication Failures, and Software and Data Integrity Failures.
+
 
 **If you are looking for a fast way to get started** evaluating your application or design, check out the "Secure Coding Practices Quick Reference" document below, which contains an itemized checklist of high-level concepts you can validate are being done properly. This checklist covers many common errors associated with the OWASP Top 10 list linked above, and should be the minimum amount of effort being put into security.
 
@@ -24,7 +25,11 @@ When requesting a security review for your application, please make sure you hav
 - [Security Code Analysis](https://secdevtools.azurewebsites.net/)
 
 ## DevSecOps
-
+Security should be introduced early in the development lifecycle. The DevSecOps process integrates security practices, automation, and tools directly into CI/CD pipelines. Recommended actions include:
+	· Static Application Security Testing (SAST): Detect code-level issues (e.g., buffer overflows, SQL injection).
+	· Dynamic Application Security Testing (DAST): Scan running applications to identify vulnerabilities at runtime.
+	· Container Image Scanning: Validate base images and dependencies for known CVEs before production release.
+	· Dependency Vulnerability Checks: Monitor open-source libraries using tools like Snyk or Dependabot.
 Introduce security to your project at early stages. The [DevSecOps section](../continuous-integration/dev-sec-ops/README.md) covers security practices, automation, tools and frameworks as part of the application CI.
 
 ## OWASP Cheat Sheets
@@ -48,6 +53,22 @@ Introduce security to your project at early stages. The [DevSecOps section](../c
 - [Unvalidated Redirects and Forwards](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md)
 - [Web Service Security](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Web_Service_Security_Cheat_Sheet.md)
 - [XML Security](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/XML_Security_Cheat_Sheet.md)
+
+## LLM Application Security
+Projects leveraging AI-driven services and Large Language Models (LLMs)  require additional security considerations beyond traditional web risks. Although still evolving, [OWASP Top 10 for Large Language Model (LLM) Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) highlights unique threats such as:
+
+1. Prompt Injection: Manipulating input prompts to produce unintended or malicious content.
+2. Data Poisoning: Influencing model training or fine-tuning with corrupted data.
+3. Model Evasion: Crafting inputs that bypass content filters or cause the model to reveal sensitive data.
+4. Unintended Data Disclosure: LLM outputs that inadvertently leak proprietary or personal information.
+
+If your project uses LLM APIs (e.g., Azure OpenAI Services) the following practices are recommmended:
+	1. Strict Input Validation & Filtering: Sanitize user-generated prompts.
+	2. Output Inspection: Filter or moderate outputs to prevent malicious or disallowed content.
+	3. Data Governance: Limit storage of sensitive data and adhere to privacy regulations.
+	4. Model Audit & Monitoring: Continuously track performance and analyze logs for anomalies or policy violations.
+
+We will continue updating this section with formal guidance as LLM security matures with more detailed best practices and references. For further reading, see [LLM security threats and mitigations](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
 
 ## Recommended Tools
 
@@ -91,7 +112,11 @@ Check out the list of tools to help enable security in your projects.
 
   - [OPA](https://github.com/open-policy-agent/opa), [Gatekeeper](https://github.com/open-policy-agent/gatekeeper), and the [Gatekeeper Library](https://github.com/open-policy-agent/gatekeeper-library/tree/master/library)
   - [cert-manager](https://github.com/jetstack/cert-manager) for easy certificate provisioning and automatic rotation.
-  - [Quickly enable mTLS between your microservices with Linkerd](https://linkerd.io/2/features/automatic-mtls/).
+  - [Service mesh (e.g. Linkerd): enable mTLS between and secure communication between microservices](https://linkerd.io/2/features/automatic-mtls/).
+
+- Secret Management and Governance
+  - [Credential Scanning:](https://www.gitguardian.com/) Identify hard-coded secrets in source repos using GitGuardian or Azure DevOps extensions
+  - [Azure Key Vault:](https://azure.microsoft.com/en-us/products/key-vault) Centrally store and manage keys, secrets, and certificates with strict access policies
 
 ## Useful links
 
