@@ -77,6 +77,8 @@ Check out the list of tools to help enable security in your projects.
 > **Note:** Although some tools are agnostic, the below list is geared towards Cloud Native security, with a focus on Kubernetes.
 
 - Vulnerability Scanning 
+  - Azure DevOps Extension
+    - [Microsoft Security Code Analysis](https://secdevtools.azurewebsites.net/): A suite of tasks (CredScan, Roslyn Analyzers, etc.) that integrate into Azure DevOps pipelines for .NET applications.
   - [SonarCloud](https://sonarcloud.io/)
     - Integrates with Azure Devops with the click of a button.
   - [Snyk](https://github.com/snyk/snyk)
@@ -137,8 +139,9 @@ Check out the list of tools to help enable security in your projects.
   - [Service mesh (e.g. Linkerd): enable mTLS between and secure communication between microservices](https://linkerd.io/2/features/automatic-mtls/).
 
 - Secret Management and Governance
-  - [Credential Scanning:](https://www.gitguardian.com/) Identify hard-coded secrets in source repos using GitGuardian or Azure DevOps extensions
-  - [Azure Key Vault:](https://azure.microsoft.com/en-us/products/key-vault) Centrally store and manage keys, secrets, and certificates with strict access policies
+  - [Credential Scanning:](https://www.gitguardian.com/) Identify hard-coded secrets in source repos using GitGuardian or Azure DevOps extensions. Leverage Microsoft Security Code Analysis (CredScan) or GitGuardian extension for Azure DevOps, to detect leaked credentials in commits.
+  - [Azure Key Vault:](https://azure.microsoft.com/en-us/products/key-vault) Centrally store and manage keys, secrets, and certificates with strict access policies. Ensure rotating secrets, using managed identities to fetch secrets.
+
 
 ## Useful links
 
