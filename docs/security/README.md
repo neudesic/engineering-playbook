@@ -76,8 +76,7 @@ Check out the list of tools to help enable security in your projects.
 
 > **Note:** Although some tools are agnostic, the below list is geared towards Cloud Native security, with a focus on Kubernetes.
 
-- Vulnerability Scanning
-
+- Vulnerability Scanning 
   - [SonarCloud](https://sonarcloud.io/)
     - Integrates with Azure Devops with the click of a button.
   - [Snyk](https://github.com/snyk/snyk)
@@ -86,6 +85,23 @@ Check out the list of tools to help enable security in your projects.
   - [Anchore](https://github.com/anchore/anchore-engine)
   - [Other tools from OWASP](https://owasp.org/www-community/Vulnerability_Scanning_Tools)
   - [See why you should check for vulnerabilities at all layers of the stack](https://sysdig.com/blog/image-scanning-best-practices/), as well as a couple of other useful tips to reduce surface area for attacks.
+  - Azure DevOps Extensions: Microsoft Security Code Analysis: A suite of tasks (CredScan, Roslyn Analyzers, etc.) that integrate into Azure DevOps pipelines for .NET applications.
+  - Language-Specific Linters/Analyzers
+    - [ESLint (JavaScript)](https://eslint.org/), [Bandit (Python)](https://bandit.readthedocs.io/en/latest/), etc.: Enable them within build pipelines.
+    - Run these tools automatically via pipeline tasks or scripts in YAML.
+  - [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction): Can scan images in Azure Container Registry (ACR) automatically. Its recommended linking ACR to Defender for Cloud for continuous scanning.
+  - Dependency Vulnerability Checks
+    - [Snyk](https://docs.snyk.io/scan-with-snyk/snyk-open-source/scan-open-source-libraries-and-licenses) for scanning open-source libraries used in your application.
+    - Built-in features in [GitHub Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) (if you mirror repos on GitHub) or 3rd-party tools that plug into Azure DevOps.
+
+
+- DAST (Dynamic Application Security Testing)
+  
+  1. OWASP ZAP
+     - Provide a sample Azure DevOps pipeline config for spinning up a test environment and running ZAP scans automatically.
+     - Emphasize ephemeral test deployments (e.g., spin up container environments in AKS for scanning, then tear them down)
+  2. Integration tips
+     - Outline how to parse DAST reports and mark pipeline runs as “failed” if critical findings are discovered.
 
 - Runtime Security
 
@@ -93,6 +109,7 @@ Check out the list of tools to help enable security in your projects.
   - [Tracee](https://github.com/aquasecurity/tracee)
   - [Kubelinter](https://github.com/stackrox/kube-linter)
     - May not fully qualify as runtime security, but helps ensure you're enabling best practices.
+  - Azure Monitor / Microsoft Defender for Cloud: Use built-in anomaly detection for AKS clusters, VMs, and PaaS services. 
 
 - Binary Authorization
 
@@ -107,6 +124,11 @@ Check out the list of tools to help enable security in your projects.
   - [Notary](https://github.com/theupdateframework/notary)
     - Note harbor leverages notary internally.
   - [TUF](https://github.com/theupdateframework/tuf)
+  - [Cosign(from the Sigstore project)](https://github.com/sigstore/cosign)
+  - Azure CLI or ACR Tasks can also sign and verify images as part of the build or release process
+  - Admission Controls
+    - For AKS, integrate Gatekeeper or other admission control solutions to enforce “only signed images can be deployed.
+    - See here for references to an example Azure Policy or Gatekeeper constraint template (Coming soon)
 
 - Other K8s Security
 
