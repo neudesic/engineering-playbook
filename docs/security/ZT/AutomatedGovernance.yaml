@@ -1,0 +1,24 @@
+trigger:
+- main
+pool:
+  vmImage: 'ubuntu-latest'
+steps:
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloudConnection'
+    organization: 'YourOrg'
+    scannerMode: 'MSBuild'
+    projectKey: 'MyProjectKey'
+    projectName: 'MyProjectName'
+- script: |
+    dotnet build --configuration Release
+  displayName: 'Build Solution'
+- task: SonarCloudAnalyze@1
+  displayName: 'Run SAST Analysis'
+- script: |
+    az policy assignment list --output table
+  displayName: 'Check Azure Policy Assignments'
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+  displayName: 'Publish SAST Results'
