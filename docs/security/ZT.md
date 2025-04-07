@@ -35,7 +35,7 @@ Zero Trust is a security framework that assumes breaches can occur at any layer.
 - Use System Assigned or User Assigned Managed Identities for Azure services (e.g., Azure Functions, Azure Web Apps, AKS pods).
 - This removes the need to store credentials in code or configuration.
 
-In this [Bicep snippet](./ZT/authsample.bicep), we deploy an Azure Web App with SystemAssigned managed identity and enforce HTTPs only. 
+Example: In this [Bicep snippet](./ZT/authsample.bicep), we deploy an Azure Web App with SystemAssigned managed identity and enforce HTTPs only. 
 
 
 ## 2. Least Privilege & Micro-Segmentation
@@ -47,6 +47,8 @@ In this [Bicep snippet](./ZT/authsample.bicep), we deploy an Azure Web App with 
 - In Azure Kubernetes Service (AKS), define NetworkPolicy objects to limit pod-to-pod traffic.
 - Consider service mesh solutions like Linkerd or Istio for fine-grained traffic management and mTLS.
 
+Example: This [policy](./ZT/leastprivilege.yaml) ensures nginx pods in the production namespace only accept traffic from pods in a backend namespace, and only send outgoing traffic to a logging namespace.
+
 ## 3. Secure Configuration & Continuous Compliance
 
 1. Enforce TLS in Transit
@@ -55,6 +57,8 @@ In this [Bicep snippet](./ZT/authsample.bicep), we deploy an Azure Web App with 
 2. Azure Policy
 - Use Azure Policy to require encryption at rest, specific SKU types, or to block public IP assignments.
 - Integrate Azure Policy with DevOps for gating deployments that violate policy.
+
+Example: This [Azure Policy](./ZT/SecureConfig.json) audits any App Service (Web App) configuration that does not enable HTTPS-only.
 
 ## 4. Continuous Monitoring & Threat Detection
 
@@ -73,6 +77,15 @@ In this [Bicep snippet](./ZT/authsample.bicep), we deploy an Azure Web App with 
 2. Policy as Code
 - Store Azure Policy definitions in source control.
 - Auto-deploy them via pipelines to keep environment configurations consistent and validated.
+
+Example: This [pipeline](./ZT/AutomatedGovernance.yaml) does the following:
+1.	Triggers on the main branch.
+2.	Prepares SonarCloud for SAST.
+3.	Builds the .NET solution.
+4.	Runs SAST analysis.
+5.	Queries assigned Azure Policies (as a simplistic example of policy checks).
+6.	Publishes the SAST results back to SonarCloud.
+
 
 
 # Additional Considerations for Zero Trust in Azure
