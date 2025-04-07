@@ -35,6 +35,8 @@ Zero Trust is a security framework that assumes breaches can occur at any layer.
 - Use System Assigned or User Assigned Managed Identities for Azure services (e.g., Azure Functions, Azure Web Apps, AKS pods).
 - This removes the need to store credentials in code or configuration.
 
+In this [Bicep snippet](docs/security/ZT/authsample.bicep), we deploy an Azure Web App with SystemAssigned managed identity and enforce HTTPs only. 
+
 
 ## 2. Least Privilege & Micro-Segmentation
 
