@@ -4,18 +4,20 @@ on:
   push:
     branches:
       - neudesic
+
+permissions:
+  actions: write
+  contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  pages: write
+  pull-requests: write
+
 jobs:
   build:
     name: Build Engineering Playbook
     runs-on: ubuntu-latest
-    permissions:
-      actions: write
-      contents: write
-      deployments: write
-      id-token: write
-      issues: write
-      pages: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v3
         with:
