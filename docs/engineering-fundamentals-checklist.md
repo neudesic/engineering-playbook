@@ -47,7 +47,7 @@ More details on [source control](./source-control/README.md)
 - [ ] Project uses CD to manage deployments to a replica environment before Pull Requests are merged.
 - [ ] Main branch is always shippable.
 
-More details on [continuous integration](continuous-integration/README.md) and [continuous delivery](continuous-delivery/README.md)
+More details on [continuous integration](CI-CD/continuous-integration.md) and [continuous delivery](CI-CD/continuous-delivery.md).
 
 ## Design Reviews
 

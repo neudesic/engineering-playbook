@@ -2,7 +2,7 @@ nav:
   - Neudesic Engineering Fundamentals Playbook: README.md
   - Engineering Fundamentals Checklist: engineering-fundamentals-checklist.md
   - The First Week of an NEE Project: the-first-week-of-an-nee-project.md
-  - Who is NEE?: NEE.md
+  - Who We Are?: NEE.md
   - Agile Development: agile-development
   - Automated Testing: automated-testing
   - CI/CD: CI-CD
