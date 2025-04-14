@@ -17,7 +17,7 @@ This is our playbook. All contributions are welcome! Please feel free to submit 
 
 If you do nothing else follow the [Engineering Fundamentals Checklist](./engineering-fundamentals-checklist.md)!
 
-The [first week of an ISE project](./the-first-week-of-an-ise-project.md) is a breakdown of the sections of the playbook according to the structure of an Agile sprint.
+The [first week of an NEE project](./the-first-week-of-an-nee-project.md) is a breakdown of the sections of the playbook according to the structure of an Agile sprint.
 
 ## General Guidance
 
