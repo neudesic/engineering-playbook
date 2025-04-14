@@ -1,8 +1,8 @@
 nav:
-  - ISE Engineering Fundamentals Playbook: README.md
+  - Neudesic Engineering Fundamentals Playbook: README.md
   - Engineering Fundamentals Checklist: engineering-fundamentals-checklist.md
-  - The First Week of an ISE Project: the-first-week-of-an-ise-project.md
-  - Who is ISE?: ISE.md
+  - The First Week of an NEE Project: the-first-week-of-an-nee-project.md
+  - Who is NEE?: NEE.md
   - Agile Development: agile-development
   - Automated Testing: automated-testing
   - CI/CD: CI-CD
