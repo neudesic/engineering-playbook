@@ -30,7 +30,7 @@ The key element from conducting the engineering feasibility spikes is sharing th
 
 - The team gets together and shares learning on a weekly basis (or more frequently if needed).
 - The sharing is done via a 30-minute call.
-- Everyone on the Dev Crew joins the call (even if not everyone is assigned an engineering spike story or even if the spike work was underway and not fully completed).
+- Everyone on the development team joins the call (even if not everyone is assigned an engineering spike story or even if the spike work was underway and not fully completed).
 
 The feedback loop is significantly tighter/shorter than in sprint-based agile process. Instead of using the Sprint as the forcing function to adjust/pivot/re-prioritize, the interim sharing sessions were the trigger.
 

@@ -10,7 +10,7 @@ These [principles](https://martinfowler.com/articles/continuousIntegration.html)
 
 ## Goals
 
-Continuous integration automation is an integral part of the software development lifecycle intended to reduce build integration errors and maximize velocity across a dev crew.
+Continuous integration automation is an integral part of the software development lifecycle intended to reduce build integration errors and maximize velocity across a development team.
 
 A robust build automation pipeline will:
 
@@ -189,7 +189,7 @@ An effective way to identify bugs in your build at a rapid pace is to invest ear
 
 ### Avoid Checking in Broken Builds
 
-- Automated build checks, tests, lint runs, etc should be validated locally before committing your changes to the scm repo. [Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) is a practice dev crews should consider to help identify bugs and failures as early as possible within the development lifecycle.
+- Automated build checks, tests, lint runs, etc should be validated locally before committing your changes to the scm repo. [Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) is a practice development teams should consider to help identify bugs and failures as early as possible within the development lifecycle.
 
 ### Reporting Build Failures
 
@@ -228,7 +228,7 @@ An effective way to identify bugs in your build at a rapid pace is to invest ear
 
 > "By committing regularly, every committer can reduce the number of conflicting changes. Checking in a week's worth of work runs the risk of conflicting with other features and can be very difficult to resolve. Early, small conflicts in an area of the system cause team members to communicate about the change they are making."
 
-In the spirit of transparency and embracing frequent communication across a dev crew, we encourage developers to commit code on a daily cadence. This approach provides visibility to feature progress and accelerates pair programming across the team. Here are some principles to consider:
+In the spirit of transparency and embracing frequent communication across a development team, we encourage developers to commit code on a daily cadence. This approach provides visibility to feature progress and accelerates pair programming across the team. Here are some principles to consider:
 
 ### Everyone Commits to the Git Repository Each Day
 
