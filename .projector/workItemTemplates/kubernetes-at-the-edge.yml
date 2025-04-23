@@ -29,7 +29,7 @@ items:
         type: feature
         description: Define your networking requirements and constraints
         acceptanceCriteria:
-          - Network design allows for successful configuration and complies with other compute and network constraints and requirements. The acceptance criteria for this should be further scoped and defined by the dev crew.
+          - Network design allows for successful configuration and complies with other compute and network constraints and requirements. The acceptance criteria for this should be further scoped and defined by the development team.
         children:
           - name: As a cluster operator, I want to design my network with necessary external and internal networking requirements so that my cluster can function properly and is seamlessly integrated with existing networking and can be setup correctly
             type: story
@@ -64,7 +64,7 @@ items:
         type: feature
         description: This is more for projects that are looking to configure a kubernetes cluster from the ground up, such as in bare-metal scenarios. Define the base image(s) that will be used for your nodes and plan for lifecycle and access management.
         acceptanceCriteria:
-          - Base image lifecycle and access is planned and implemented. The acceptance criteria for this should be further scoped and defined by the dev crew.
+          - Base image lifecycle and access is planned and implemented. The acceptance criteria for this should be further scoped and defined by the development team.
         children:
           - name: As a cluster operator, I want to define the base image(s) for my nodes so that I can ensure my nodes remain consistent and reliable. Note, depending on the needs of the customer, it may make sense to build and store custom VM images for your kubernetes nodes.
             type: story
@@ -89,7 +89,7 @@ items:
         type: feature
         description: Configuration, provisioning and lifecycle management of your cluster including upgrades and maintenance
         acceptanceCriteria:
-          - Repeatable, scalable cluster configuration implemented. The acceptance criteria for this should be further scoped and defined by the dev crew.
+          - Repeatable, scalable cluster configuration implemented. The acceptance criteria for this should be further scoped and defined by the development team.
         children:
           - name: As a cluster operator, I want to leverage existing tooling so that I can setup and configure my clusters at the edge with vetted tools
             type: story
@@ -127,7 +127,7 @@ items:
         type: feature
         description: Manage any credentials, secrets, keys in a secure manner
         acceptanceCriteria:
-          - Sensitive information is protected and accessible. The acceptance criteria for this should be further scoped and defined by the dev crew.
+          - Sensitive information is protected and accessible. The acceptance criteria for this should be further scoped and defined by the development team.
         children:
           - name: As a cluster operator, I want to store my secrets/keys/credentials in a key store so that I can secure and protect any sensitive information. Securing and protecting vulnerable information should be a priority in any project. In the case of kubernetes clusters at the edge, consider the many access points and what information needs to be protected and where, from VM login credentials to workload secrets and keys.
             type: story
@@ -167,7 +167,7 @@ items:
         type: feature
         description: Logging and monitoring of cluster and workloads
         acceptanceCriteria:
-          - The acceptance criteria for this should be further scoped and defined by the dev crew.
+          - The acceptance criteria for this should be further scoped and defined by the development team.
         children:
           - name: As a cluster operator, I want to implement logging and monitoring of my host and my nodes so that I can track and act on the health of my cluster
             type: story
@@ -185,7 +185,7 @@ items:
         type: feature
         description: Deploying your application to your cluster
         acceptanceCriteria:
-          - Applications can run on cluster successfully. The acceptance criteria for this should be further scoped and defined by the dev crew.
+          - Applications can run on cluster successfully. The acceptance criteria for this should be further scoped and defined by the development team.
         children:
           - name: As a cluster operator, I want to deploy an application to my cluster so I can ensure my cluster has access to the container registries that I expect.
             type: story

@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Design reviews should not feel like a burden. Design reviews can be easily incorporated into the dev crew process with minimal overhead.
+Design reviews should not feel like a burden. Design reviews can be easily incorporated into the development team process with minimal overhead.
 
 - Only create design reviews when needed. Not every story or task requires a complete design review.
 - Leverage this guidance to make changes that best fit in with the team. Every team works differently.
-- Leverage Microsoft subject-matter experts (SME) as needed during design reviews. Not every story needs SME or leadership sign-off. Most design reviews can be fully executed within a dev crew.
+- Leverage Microsoft subject-matter experts (SME) as needed during design reviews. Not every story needs SME or leadership sign-off. Most design reviews can be fully executed within a development team.
 - [Use diagrams](./preferred-diagram-tooling.md) to visualize concepts and architecture.
 
 The following guidelines outline how Microsoft and the customer together can incorporate design reviews into their day-to-day agile processes.
@@ -30,7 +30,7 @@ In many engagements Microsoft works with customers using a SCRUM agile developme
 Stories that will benefit from design reviews have one or more of the following in common:
 
 1. There are many unknown or unclear requirements
-1. There is a wide distribution of anticipated workload, or story pointing, across the dev crew
+1. There is a wide distribution of anticipated workload, or story pointing, across the development team
 1. The developer cannot clearly illustrate all tasks required for the story
 
 > **Tip:** After sprint planning is complete the team should consider hosting an initial design review discussion to dive deep in the design requirement of the stories that were identified. This will provide more clarity so that the team can move forward with a design review, synchronously or asynchronously, and complete tasks.
@@ -56,7 +56,7 @@ It is also a great time to check in on design reviews
 - How have design changes impacted the engagement?
 - Have previous design artifacts been updated to reflect new changes?
 
-All design artifacts should be treated as a living document. As requirements change or uncover more unknowns the dev crew should retroactively update all design artifacts. Missing this critical step may cause the customer to incur future technical debt. Artifacts that are not up to date are `bugs` in the design.
+All design artifacts should be treated as a living document. As requirements change or uncover more unknowns the development team should retroactively update all design artifacts. Missing this critical step may cause the customer to incur future technical debt. Artifacts that are not up to date are `bugs` in the design.
 
 > **Tip:** Keep your artifacts up to date by adding it to your teams [definition of done](../../../agile-development/team-agreements/definition-of-done.md) for all user stories.
 
@@ -76,7 +76,7 @@ Lastly, while it is suggested that sync design reviews are scheduled during the 
 
 Wrap-up sprints are a great time to tie up loose ends with the customer and hand-off solution. Customer hand-off becomes a lot easier when there are design artifacts to reference and deliver alongside the completed solution.
 
-During your wrap-up sprints the dev crew should consider the following:
+During your wrap-up sprints the development team should consider the following:
 
 1. Are the design artifacts up to date?
 1. Are the design artifacts stored in an accessible location?
