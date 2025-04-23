@@ -104,9 +104,10 @@ More details on [observability](./observability/README.md)
 
 Developers on the team can:
 
-- [ ] Build/Compile source to verify it is free of syntax errors and compiles.
-- [ ] Execute all automated tests (unit, e2e, etc).
-- [ ] Start/Launch end-to-end to simulate execution in a deployed environment.
+- [ ] Run `go setup` to perform any initialization (loading dependencies, generating source code or project files) on a fresh clone of the project's Git repository.
+- [ ] Run `go build` to build/compile the source code to verify it is free of syntax errors and compiles.
+- [ ] Run `go test` to run all automated tests (unit, e2e, etc.).
+- [ ] Run `go start` to start or launch the product locally on the developer's machine or virtual development environment.
 - [ ] Attach a debugger to started solution or running automated tests, set breakpoints, step through code, and inspect variables.
 - [ ] Automatically install dependencies by pressing F5 (or equivalent) in their IDE.
 - [ ] Use local dev configuration values (i.e. .env, appsettings.development.json).
