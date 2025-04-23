@@ -20,7 +20,7 @@ Customers can also submit their feedback directly via GitHub or UserVoice (as ap
 
 The easiest way for a Microsoft employee within ISE to track a specific feedback item is to [follow the feedback (a work item)](https://learn.microsoft.com/azure/devops/boards/work-items/follow-work-items?view=azure-devops) in Azure DevOps.
 
-## As a Microsoft Employee Within ISE, if I Submit a Feedback and Move to Another Dev Crew Engagement, how Would my Customer get an Update on that Feedback?
+## As a Microsoft Employee Within ISE, if I Submit a Feedback and Move to Another development team Engagement, how Would my Customer get an Update on that Feedback?
 
 If the feedback is also submitted via GitHub or UserVoice, the customer may elect to follow that item for publicly available updates.  The customer may also contact their Microsoft account representative to request an update.
 
