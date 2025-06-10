@@ -88,7 +88,7 @@ Finally, launch the site locally using the `mkdocs serve` command from the root 
 
 ## Maintainers
 
-For any questions or concerns, please contact [Michael Collins](https://github.com/mfcollins3/mfcollins3), [Mike Holdorf](https://github.com/mikeholdorf) or [Chad Thomas](https://github.com/skyarkitekten).
+For any questions or concerns, please contact [Michael Collins](https://github.com/mfcollins3), [Mike Holdorf](https://github.com/mikeholdorf) or [Chad Thomas](https://github.com/skyarkitekten).
 
 ## Legal Notices
 
