@@ -17,7 +17,7 @@ More details on [agile development](agile-development/README.md)
 - [ ] The board is organized (swim lanes, feature tags, technology tags).
 - [ ] Conditions of Acceptance are clearly defined for the development team.
 
-More details on [backlog management](agile-development/backlog-management/backlog-management.md)
+More details on [backlog management](agile-development/backlog-management.md)
 
 ## Retrospectives
 
