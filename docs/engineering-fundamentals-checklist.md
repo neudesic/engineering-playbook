@@ -17,7 +17,7 @@ More details on [agile development](agile-development/README.md)
 - [ ] The board is organized (swim lanes, feature tags, technology tags).
 - [ ] Conditions of Acceptance are clearly defined for the development team.
 
-More details on [backlog management](agile-development/advanced-topics/backlog-management/README.md)
+More details on [backlog management](agile-development/advanced-topics/backlog-management/)
 
 ## Retrospectives
 
@@ -26,7 +26,7 @@ More details on [backlog management](agile-development/advanced-topics/backlog-m
 - [ ] Experiments have owners and are added to project backlog.
 - [ ] The team conducts longer retrospective for Milestones and project completion.
 
-More details on [retrospectives](agile-development/core-expectations/README.md)
+More details on [retrospectives](agile-development/ceremonies/)
 
 ## Source Control
 
