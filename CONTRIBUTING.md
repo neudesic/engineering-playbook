@@ -18,7 +18,7 @@ If you are unsure if your content will match this playbook, you are welcome to c
 ## General guidance
 
 - Quality is more important than quantity
-- Write in a way that you would want someone else to explain something to you. Use [`plain english`](http://www.plainenglish.co.uk/how-to-write-in-plain-english.html)
+- Write in a way that you would want someone else to explain something to you. Use [`plain english`](https://www.plainenglish.co.uk/free-guides)
 - Be friendly, technical, professional and concise
 - Communicate as engineers, not marketing; we want to share what we learned, not "sell" our ideas
 - Don't recreate introductory content, link to it
@@ -56,10 +56,6 @@ If you are not a regular contributor to the project, but you would like to contr
 - **Periodic and regular contributions:** \
 If you plan to update the content semi-regularly or regularly, you can be added to the project's Contributors group. Please contact one of the [maintainers](#maintainers) to be added to the group. You will still need to submit a PR against main in order to merge your changes.
 
-> NOTE: You need to be part of the `Microsoft organization` in GitHub to be added to the contributors group. You need to be also part of the `Microsoft/code-with-engineering-playbook-collaborators teams` in github.
-
-Since this is not considered an internal Microsoft github repo, you cannot use the microsoft github alias for committing changes. You have to use your personal github account which is linked to Microsoft account. If you use the microsoft github account, you will see this error while trying to create a PR - **"You cannot contribute to repositories outside of your enterprise `Microsoft EMU`"**.
-
 ### Submitting a PR
 
 - Add your changes to a new branch `<github alias>/<title>` or by forking the repository
@@ -92,7 +88,7 @@ Finally, launch the site locally using the `mkdocs serve` command from the root 
 
 ## Maintainers
 
-For any questions or concerns, please contact [Tess Ferrandez](https://github.com/TessFerrandez), [Shiran Rubin](https://github.com/shiranr) or [Federica Nocera](https://github.com/fnocera).
+For any questions or concerns, please contact [Michael Collins](https://github.com/mfcollins3), [Mike Holdorf](https://github.com/mikeholdorf) or [Chad Thomas](https://github.com/skyarkitekten).
 
 ## Legal Notices
 
