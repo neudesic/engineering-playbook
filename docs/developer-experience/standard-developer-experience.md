@@ -57,7 +57,7 @@ executable="go-$command_arg"
 # First check if the executable exists in the bin subdirectory
 if [ -x "./bin/$executable" ]; then
   echo "Executing local ./bin/$executable..."
-  "./bin/$executable"
+  "./bin/$executable" "${@:2}"
   exit $?
 fi
 
@@ -89,18 +89,22 @@ if "%~1"=="" (
 set "command_arg=%~1"
 set "executable=go-%command_arg%"
 
+:: Create shifted arguments (remove first argument)
+set "shifted_args=%*"
+set "shifted_args=!shifted_args:*%1 =!"
+
 :: First check if the executable exists in the bin subdirectory
 if exist ".\bin\%executable%.exe" (
   echo Executing local .\bin\%executable%...
-  ".\bin\%executable%"
+  ".\bin\%executable%.exe" !shifted_args!
   exit /b %errorlevel%
 ) else if exist ".\bin\%executable%.bat" (
   echo Executing local .\bin\%executable%.bat...
-  ".\bin\%executable%.bat"
+  ".\bin\%executable%.bat" !shifted_args!
   exit /b %errorlevel%
 ) else if exist ".\bin\%executable%.cmd" (
   echo Executing local .\bin\%executable%.cmd...
-  ".\bin\%executable%.cmd"
+  ".\bin\%executable%.cmd" !shifted_args!
   exit /b %errorlevel%
 )
 
@@ -108,7 +112,7 @@ if exist ".\bin\%executable%.exe" (
 where /q "%executable%"
 if %errorlevel% equ 0 (
   echo Executing %executable% from PATH...
-  "%executable%"
+  "%executable%" !shifted_args!
   exit /b %errorlevel%
 ) else (
   echo Error: Command '%executable%' not found or not executable.
@@ -147,3 +151,164 @@ The use of `go` scripts have several advantages over `README` documents:
 - `go build`: Should build the product from source code.
 - `go test`: Should run all of the unit tests for the product.
 - `go start`: Should run the product. If the product has not been built, `go start` should also build the latest version of the product from source code before running the product.
+
+## Azure-Hosted Products
+
+If your project targets Microsoft Azure as a hosting environment or uses Azure resources that need to be provisioned, you should support the following commands:
+
+- `go provision`: Uses [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/) to use the Bicep templates to provision Azure resources for the product.
+
+An example of the `go-provision` program is shown below. This script prompts the user for additional information needed to provision Azure resources and deploy the product.
+
+```bash
+#!/usr/bin/env bash
+
+# Get the environment name from the first argument or prompt for it if not provided.
+if [ -z "$1" ]; then
+    read -p "Enter the environment name (e.g., dev, prod): " ENV_NAME
+else
+    ENV_NAME=$1
+fi
+
+if [ -z "$ENV_NAME" ]; then
+    echo "Error: Environment name cannot be empty."
+    exit 1
+fi
+
+ENV_FILE=".azure/$ENV_NAME/.env"
+if [ -f "$ENV_FILE" ]; then
+    set -a
+    source "$ENV_FILE"
+    set +a
+fi
+
+# Require the user to login to Azure using Azure CLI if not already logged in.
+if ! az account show > /dev/null 2>&1; then
+    az login
+fi
+
+# Determine if the web container app already exists.
+if ! [ -z "$WEB_APP_NAME" ] && az containerapp show --name $WEB_APP_NAME --resource-group "rg-$ENV_NAME" --query "name" -o tsv > /dev/null 2>&1; then
+    echo "Web container app $WEB_APP_NAME already exists."
+    WEB_APP_EXISTS=true
+else
+    echo "Web container app $WEB_APP_NAME does not exist."
+    WEB_APP_EXISTS=false
+fi
+
+# Read the password from the environment variable or prompt for it if not set.
+if [ -z "$POSTGRES_PASSWORD" ]; then
+    read -sp "Enter the PostgreSQL password: " POSTGRES_PASSWORD
+    echo
+
+    if [ -z "$POSTGRES_PASSWORD" ]; then
+        echo "Error: Password cannot be empty."
+        exit 1
+    fi
+
+    read -sp "Confirm the PostgreSQL password: " POSTGRES_PASSWORD_CONFIRM
+    echo
+
+    if [ "$POSTGRES_PASSWORD" != "$POSTGRES_PASSWORD_CONFIRM" ]; then
+        echo "Error: Passwords do not match."
+        exit 1
+    fi
+fi
+
+# Read the owner email from the environment variable or prompt for it if not set.
+if [ -z "$OWNER_EMAIL" ]; then
+    read -p "Enter the owner email: " OWNER_EMAIL
+
+    if [ -z "$OWNER_EMAIL" ]; then
+        echo "Error: Owner email cannot be empty."
+        exit 1
+    fi
+fi
+
+POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
+    OWNER_EMAIL=$OWNER_EMAIL \
+    WEB_APP_EXISTS=$WEB_APP_EXISTS \
+    azd provision
+```
+
+The equivalent Windows Batch program is below:
+
+```batch
+@echo off
+setlocal enabledelayedexpansion
+
+if "%~1"=="" (
+    set /p ENV_NAME="Enter the environment name (e.g., dev, prod): "
+) else (
+    set ENV_NAME=%~1
+)
+
+if "!ENV_NAME!"=="" (
+    echo Error: Environment name cannot be empty.
+    exit /b 1
+)
+
+set ENV_FILE=.azure\!ENV_NAME!\.env
+if exist "!ENV_FILE!" (
+    echo Loading environment variables from !ENV_FILE!
+    for /f "tokens=*" %%a in ('type "!ENV_FILE!" ^| findstr /v "^#" ^| findstr "="') do (
+        set "%%a"
+    )
+)
+
+:: Require the user to log into Azure using Azure CLI if not already logged in.
+az account show > nul 2>&1
+if %ERRORLEVEL% NEQ 0 (
+    az login
+)
+
+:: Determine if the web container app already exists.
+if not defined WEB_APP_NAME (
+    echo Error: WEB_APP_NAME environment variable is not set.
+    echo Please define it in !ENV_FILE! or set it before running this script.
+    exit /b 1
+)
+
+az containerapp show --name "!WEB_APP_NAME!" --resource-group "rg-!ENV_NAME!" --query "name" -o tsv >nul 2>&1
+if %ERRORLEVEL% EQU 0 (
+    echo Web container app !WEB_APP_NAME! already exists.
+    set WEB_APP_EXISTS=true
+) else (
+    echo Web container app !WEB_APP_NAME! does not exist.
+    set WEB_APP_EXISTS=false
+)
+
+:: Read the password from the environment variable or prompt for it if not set.
+if not defined POSTGRES_PASSWORD (
+    echo Enter the PostgreSQL password: 
+    set /p "POSTGRES_PASSWORD="
+    echo.
+
+    if "!POSTGRES_PASSWORD!"=="" (
+        echo Error: Password cannot be empty.
+        exit /b 1
+    )
+
+    echo Confirm the PostgreSQL password: 
+    set /p "POSTGRES_PASSWORD_CONFIRM="
+    echo.
+
+    if not "!POSTGRES_PASSWORD!"=="!POSTGRES_PASSWORD_CONFIRM!" (
+        echo Error: Passwords do not match.
+        exit /b 1
+    )
+)
+
+:: Read the owner email from the environment variable or prompt for it if not set.
+if not defined OWNER_EMAIL (
+    set /p OWNER_EMAIL="Enter the owner email: "
+
+    if "!OWNER_EMAIL!"=="" (
+        echo Error: Owner email cannot be empty.
+        exit /b 1
+    )
+)
+
+set "AZD_PROVISION_ARGS=--environment !ENV_NAME!"
+azd provision %AZD_PROVISION_ARGS%
+```
